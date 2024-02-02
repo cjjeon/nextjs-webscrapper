@@ -17,9 +17,9 @@ const nextConfig = {
             }
         ]
     },
-    webpack: (config) => {
-        return {...config, externals: [...config.externals, 'chrome-aws-lambda']}
-    }
+    experimental: {
+        serverComponentsExternalPackages: ['puppeteer-core'],
+    },
 };
 
 export default nextConfig;
