@@ -1,10 +1,9 @@
-import ScrapeForm from "@/app/ScrapeForm";
-import styles from "./page.module.css";
+import ScrapeForm from "@/app/components/ScrapeForm";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <ScrapeForm/>
-    </main>
-  );
+    return (
+        <div>
+            <ScrapeForm/>
+        </div>
+    );
 }
