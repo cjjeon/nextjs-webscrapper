@@ -8,9 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "engines": {
-    "node": "14"
-  },
   "dependencies": {
     "chrome-aws-lambda": "8.0.2",
     "critters": "^0.0.20",
