@@ -2,6 +2,8 @@ import chrome from '@sparticuz/chromium';
 import {NodeHtmlMarkdown} from "node-html-markdown";
 import puppeteer from "puppeteer-core";
 
+export const maxDuration = 40; // This function can run for a maximum of 5 seconds
+export const dynamic = 'force-dynamic';
 
 const sleep = (ms: number) => {
     return new Promise((resolve) => {
@@ -47,7 +49,7 @@ export async function POST(req: Request) {
     console.log("scraping...")
 
     const {url, delay} = await req.json()
-    let timeDelay = delay || 4000
+    let timeDelay = delay || 3000
 
     console.log("launching browser...")
     const option = await getOption()
@@ -60,7 +62,7 @@ export async function POST(req: Request) {
     await page.goto(url, {timeout: 0})
 
     console.log("add delay for javascript update")
-    await sleep(4000)
+    await sleep(timeDelay)
 
     console.log("get page content...")
 
