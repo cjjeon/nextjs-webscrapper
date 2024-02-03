@@ -2,8 +2,6 @@ import chrome from '@sparticuz/chromium';
 import {NodeHtmlMarkdown} from "node-html-markdown";
 import puppeteer from "puppeteer-core";
 
-export const maxDuration = 20; // This function can run for a maximum of 5 seconds
-export const dynamic = 'force-dynamic';
 
 const sleep = (ms: number) => {
     return new Promise((resolve) => {
